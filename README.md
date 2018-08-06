@@ -92,3 +92,4 @@ console.log( parseFloat(myDecimalString) + myNumber );
 // change decimal to integer ( remove the point )
 console.log( parseInt(myDecimalString) + myNumber );
 ```
+### Jasmin testing
