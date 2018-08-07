@@ -140,7 +140,7 @@ function tripCalc() {
   }
   //divide this new miles_per_gallon by the distance to find the actual gallons needed
   // then mulitply the return of the final calculation by the cost_per_galon
-  var price = (distance/reduction_mpg) * cost_per_gallon;
+  var price = (distance/reduced_mpg) * cost_per_gallon;
   // divide the distance by speed which returns hours
   // .toFixed(2) is to trunkate the decimals to 2 only.
   var duration = (distance/speed).toFixed(2);
