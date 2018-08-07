@@ -27,7 +27,7 @@ while(!chosen){
       tripCalc();
     break;
     default:
-    alert("")
+    alert(choice +" isnt a valid entry")
  }
 }
 // custom function to crete prompts, with first argument being the amount of prompts to create
@@ -35,7 +35,7 @@ while(!chosen){
 // this is can be overwritten by passing new arguments when the function is called elsewhere.
 function prompt_for_values(amount_of_prompts,msg_1= "please enter first number",msg_2 = "please enter second number",msg_3 = "",msg_4="" ) {
     //create the variables to stope the prompts return value
-  var first_number,second_number,third_number fourth_number;
+  var first_number,second_number,third_number,fourth_number;
   if (amount_of_prompts == 2) {
      first_number = parseFloat(prompt(msg_1));
      second_number = parseFloat(prompt(msg_2));
@@ -132,11 +132,17 @@ function tripCalc() {
   // to account for the loss on miles_per_gallon past 60 mph
   // for each mph past 60, we lose 2 miles_per_gallon. so modulus 60,returns remainder of 60.
   // mulitply the return by 2 to get the actual miles_per_gallon
-  // we then divide this new miles_per_gallon by the distance to find the actual gallons needed
-  // then times the return of the final calculation by the cost_per_galon
-  var price = (distance/( miles_per_gallon - (speed %60) * 2)) * cost_per_gallon;
-  // to find the duration we just need to divide the distance by mph.
-  // which returns hours. the .toFixed(2) is to trunkate the decimals to 2 only.
+  var reduced_mpg =  miles_per_gallon - ((speed % 60) * 2);
+  //stopping the reduction at 15mpg, as that seems to be the worst
+  // mpg rating of any car.
+  if (reduced_mpg < 15 ) {
+    reduced_mpg = 15;
+  }
+  //divide this new miles_per_gallon by the distance to find the actual gallons needed
+  // then mulitply the return of the final calculation by the cost_per_galon
+  var price = (distance/reduction_mpg) * cost_per_gallon;
+  // divide the distance by speed which returns hours
+  // .toFixed(2) is to trunkate the decimals to 2 only.
   var duration = (distance/speed).toFixed(2);
   alert("Your trip will take "+ duration + "hours and cost £" + price.toFixed(2)) ;
 }
