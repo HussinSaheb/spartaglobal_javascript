@@ -95,11 +95,13 @@ function basicCalc(){
 function advancedCalc() {
   var type =  parseInt(prompt("please chose \n" + "1 - Power\n" +" 2- Square Root\n" ));
   if (type==1) {
+    // call for 2 prompts
     var value_array = prompt_for_values(2);
     number_1 = value_array[0];
     number_2 = value_array[1];
     return alert(Math.pow(number_1, number_2));
   }else if (type==2) {
+    //call for single prompt and return value used in the sqrt.
     return alert(Math.sqrt(prompt_for_values(1)));
   }
 }
