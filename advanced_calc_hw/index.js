@@ -36,9 +36,8 @@ while(!chosen){
 function prompt_for_values(amount_of_prompts,msg_1= "please enter first number",msg_2 = "please enter second number",msg_3 = "",msg_4="" ) {
     //create the variables to stope the prompts return value
   var first_number,second_number,third_number,fourth_number;
-  if (amount_of_prompts = 1) {
+  if (amount_of_prompts == 1) {
     //if the prompts needed is only one.
-
     first_number = parseFloat(prompt(msg_1));
     // we dont need to return an array. just the value right away
     return first_number
@@ -58,7 +57,6 @@ function prompt_for_values(amount_of_prompts,msg_1= "please enter first number",
     return [first_number, second_number,third_number,fourth_number];
   }
 }
-
 //Function to do basic oprations
 function basicCalc(){
   //prompt to chose what operator to use
@@ -112,16 +110,19 @@ function advancedCalc() {
 function bmiCalc() {
   //prompt whether user wants to use the imperial or metric system
   var type =  parseInt(prompt("please chose your operation \n" + "1 - Imperial (lb)\n" +" 2 - Metric (kg)"));
-  // save the value in our value_array
-  var value_array = prompt_for_values(2,"please enter your weight","please enter your height" )
-  var weight = value_array[0];
-  var height = value_array[1];
   // conditional if the type is imperial
+  var weight, height;
   if (type == 1) {
+    var value_array = prompt_for_values(2,"please enter your weight(lb)","please enter your height(in)");
+    weight = value_array[0];
+    height = value_array[1];
     // we carry out the imperial formula for BMI calculation
     return alert("Your BMI is :" + (weight / Math.pow(height,2) * 703).toFixed(2));
     // conditional if the type is metric
   }else if(type == 2 ){
+    var value_array = prompt_for_values(2,"please enter your weight(lb)","please enter your height(in)");
+    weight = value_array[0];
+    height = value_array[1];
     //we carry our the metric formula
     return alert("Your BMI is : " + (weight / Math.pow(height,2).toFixed(2)).toFixed(2));
   }
@@ -154,7 +155,7 @@ function tripCalc() {
     price = (distance/reduced_mpg) * cost_per_gallon;
   } else{
     // if the speed is less than 60 or equal to 60
-    //then do the usual price. of
+    //then do the usual price.
     price = (distance/miles_per_gallon) * cost_per_gallon;
   }
   // divide the distance by speed which returns hours
