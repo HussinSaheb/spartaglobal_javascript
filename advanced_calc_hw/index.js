@@ -120,13 +120,12 @@ function bmiCalc() {
     return alert("Your BMI is :" + (weight / Math.pow(height,2) * 703).toFixed(2));
     // conditional if the type is metric
   }else if(type == 2 ){
-    value_array = prompt_for_values(2,"please enter your weight(lb)","please enter your height(in)");
+    value_array = prompt_for_values(2,"please enter your weight(kg)","please enter your height(m)");
     weight = value_array[0];
     height = value_array[1];
     //we carry our the metric formula
     return alert("Your BMI is : " + (weight / Math.pow(height,2).toFixed(2)).toFixed(2));
   }
-
 }
 //function to calculate the trip
 function tripCalc() {
@@ -153,7 +152,7 @@ function tripCalc() {
     //divide this new miles_per_gallon by the distance to find the actual gallons needed
     // then mulitply the return of the final calculation by the cost_per_galon
     price = (distance/reduced_mpg) * cost_per_gallon;
-  } else{
+  }else{
     // if the speed is less than 60 or equal to 60
     //then do the usual price.
     price = (distance/miles_per_gallon) * cost_per_gallon;
