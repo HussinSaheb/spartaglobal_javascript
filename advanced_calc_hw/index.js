@@ -132,15 +132,22 @@ function tripCalc() {
   // to account for the loss on miles_per_gallon past 60 mph
   // for each mph past 60, we lose 2 miles_per_gallon. so modulus 60,returns remainder of 60.
   // mulitply the return by 2 to get the actual miles_per_gallon
-  var reduced_mpg =  miles_per_gallon - ((speed % 60) * 2);
-  //stopping the reduction at 15mpg, as that seems to be the worst
-  // mpg rating of any car.
-  if (reduced_mpg < 15 ) {
-    reduced_mpg = 15;
+  var price;
+  if (speed > 60) {
+    var reduced_mpg =  miles_per_gallon - ((speed % 60) * 2);
+    //stopping the reduction at 15mpg, as that seems to be the worst
+    // mpg rating of any car.
+    if (reduced_mpg < 15 ) {
+      reduced_mpg = 15;
+    }
+    //divide this new miles_per_gallon by the distance to find the actual gallons needed
+    // then mulitply the return of the final calculation by the cost_per_galon
+    price = (distance/reduced_mpg) * cost_per_gallon;
+  } else{
+    // if the speed is less than 60 or equal to 60
+    //then do the usual price. of
+    price = (distance/miles_per_gallon) * cost_per_gallon;
   }
-  //divide this new miles_per_gallon by the distance to find the actual gallons needed
-  // then mulitply the return of the final calculation by the cost_per_galon
-  var price = (distance/reduced_mpg) * cost_per_gallon;
   // divide the distance by speed which returns hours
   // .toFixed(2) is to trunkate the decimals to 2 only.
   var duration = (distance/speed).toFixed(2);
