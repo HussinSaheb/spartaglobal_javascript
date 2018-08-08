@@ -417,6 +417,7 @@ doSomethingElse();
 // wont print out the variable
 // will return uncaught Error, variable not defined.
 console.log(insideVariable);
+
 function firstFunction() {
   console.log("Im in the first function");
 }
