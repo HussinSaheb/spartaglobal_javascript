@@ -36,7 +36,11 @@ while(!chosen){
 function prompt_for_values(amount_of_prompts,msg_1= "please enter first number",msg_2 = "please enter second number",msg_3 = "",msg_4="" ) {
     //create the variables to stope the prompts return value
   var first_number,second_number,third_number,fourth_number;
-  if (amount_of_prompts == 2) {
+  if (amount_of_prompts = 1) {
+    first_number = parseFloat(prompt(msg_1));
+    return first_number
+  }
+  else if (amount_of_prompts == 2) {
      first_number = parseFloat(prompt(msg_1));
      second_number = parseFloat(prompt(msg_2));
     // return the value as an array
@@ -90,13 +94,13 @@ function basicCalc(){
 // function to do more Advanced operations
 function advancedCalc() {
   var type =  parseInt(prompt("please chose \n" + "1 - Power\n" +" 2- Square Root\n" ));
-  var value_array = prompt_for_values(2);
-  number_1 = value_array[0];
-  number_2 = value_array[1];
   if (type==1) {
+    var value_array = prompt_for_values(2);
+    number_1 = value_array[0];
+    number_2 = value_array[1];
     return alert(Math.pow(number_1, number_2));
   }else if (type==2) {
-    return alert(Math.sqrt(number_1, number_2));
+    return alert(Math.sqrt(prompt_for_values(1)));
   }
 }
 // function to calculate the BMI
