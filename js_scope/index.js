@@ -2,7 +2,7 @@
 // what can that bit of code see in terms of the variable or functions
 
 
-lexical scope - "Code can see out, but cant see in"
+// lexical scope - "Code can see out, but cant see in"
 var outsideVariable = 5;
 function doSomething() {
   console.log(outsideVariable);
