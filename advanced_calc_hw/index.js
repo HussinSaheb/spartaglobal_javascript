@@ -37,7 +37,10 @@ function prompt_for_values(amount_of_prompts,msg_1= "please enter first number",
     //create the variables to stope the prompts return value
   var first_number,second_number,third_number,fourth_number;
   if (amount_of_prompts = 1) {
+    //if the prompts needed is only one.
+
     first_number = parseFloat(prompt(msg_1));
+    // we dont need to return an array. just the value right away
     return first_number
   }
   else if (amount_of_prompts == 2) {
