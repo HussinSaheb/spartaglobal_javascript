@@ -111,16 +111,16 @@ function bmiCalc() {
   //prompt whether user wants to use the imperial or metric system
   var type =  parseInt(prompt("please chose your operation \n" + "1 - Imperial (lb)\n" +" 2 - Metric (kg)"));
   // conditional if the type is imperial
-  var weight, height;
+  var weight, height, value_array;
   if (type == 1) {
-    var value_array = prompt_for_values(2,"please enter your weight(lb)","please enter your height(in)");
+    value_array = prompt_for_values(2,"please enter your weight(lb)","please enter your height(in)");
     weight = value_array[0];
     height = value_array[1];
     // we carry out the imperial formula for BMI calculation
     return alert("Your BMI is :" + (weight / Math.pow(height,2) * 703).toFixed(2));
     // conditional if the type is metric
   }else if(type == 2 ){
-    var value_array = prompt_for_values(2,"please enter your weight(lb)","please enter your height(in)");
+    value_array = prompt_for_values(2,"please enter your weight(lb)","please enter your height(in)");
     weight = value_array[0];
     height = value_array[1];
     //we carry our the metric formula
