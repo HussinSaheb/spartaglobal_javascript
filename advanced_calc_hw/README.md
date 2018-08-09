@@ -38,4 +38,4 @@ Deliver code via link to pull request in Teams to Rich and Anthony
 #### NOTE this is the version without tests.
 
  ### See
-  [https://github.com/HussinSaheb/spartaglobal_tdd](https://github.com/HussinSaheb/spartaglobal_tdd), for the tested function version.
+  [https://github.com/HussinSaheb/spartaglobal_tdd](https://github.com/HussinSaheb/spartaglobal_tdd), for the tested Advanced Calculator
