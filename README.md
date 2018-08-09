@@ -394,7 +394,9 @@ for (var key in my_object) {
 
 
 ```
-### Scope
+### scope
+
+
 ```javascript
 // what is scope?
 // what can that bit of code see in terms of the variable or functions
