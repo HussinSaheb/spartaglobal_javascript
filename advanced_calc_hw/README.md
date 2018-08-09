@@ -35,6 +35,7 @@ Output to console - console.log("Hello Sparta")
 Must meet DOF (Definition of Done)
 Must use Functions (DRY - Dont repeat yourself)
 Deliver code via link to pull request in Teams to Rich and Anthony
-#### this is the version without tests.
+#### NOTE this is the version without tests.
 
- see [https://github.com/HussinSaheb/spartaglobal_tdd](https://github.com/HussinSaheb/spartaglobal_tdd), for the  tested function version. 
+ ### See
+  [https://github.com/HussinSaheb/spartaglobal_tdd](https://github.com/HussinSaheb/spartaglobal_tdd), for the tested function version.
