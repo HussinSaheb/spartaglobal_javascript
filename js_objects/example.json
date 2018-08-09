@@ -1,0 +1,14 @@
+"people":[{
+  "person1":{
+            "name": "Hussin",
+            "age": 24,
+            "employed": true,
+            "friends": ["Mav","Els"]
+          },
+  "person2":{
+            "name": "Mav",
+            "age": 20,
+            "employed": true,
+            "friends": ["Mav","Els"]
+  }
+}]
